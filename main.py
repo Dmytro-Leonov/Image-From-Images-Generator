@@ -1,11 +1,12 @@
 import os
 import numpy as np
-from cv2 import cv2
+import cv2
 from PIL import Image
 from natsort import os_sorted
 
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 SRC_FOLDER, DIR_FOLDER, IMAGE_FOLDER, CONVERTED_IMAGES_FOLDER = \
-    "SourceImages", "ProcessedImages", "ImagesToConvert", "ConvertedImages"
+    ROOT_DIR+ "\SourceImages", ROOT_DIR+ "\ProcessedImages", ROOT_DIR+ "\ImagesToConvert", ROOT_DIR+ "\ConvertedImages"
 
 
 class AvgColor:
